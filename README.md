@@ -1,4 +1,4 @@
-# Valerie Tian — Portfolio Website
+# Valerie Tian(jelly) — Portfolio Website
 
 个人作品集网站,纯静态 HTML/CSS,无需构建工具。
 
