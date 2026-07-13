@@ -175,8 +175,9 @@ body.is-loading main { opacity: 0; }
 
 /* ---------- Header ---------- */
 
+/* Header scrolls away with the page — only visible at the top / hero */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   padding: 50px 0;
@@ -442,9 +443,9 @@ a.pill-button:hover {
   display: block;
   text-align: left;
   font-family: var(--font-mogland);
-  font-size: 1.4em;
+  font-size: 2.4em;
   line-height: 1;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.22em;
 }
 
 .hero-headline em {
@@ -700,7 +701,10 @@ a.pill-button:hover {
 
 .work-stats span {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ink);
   line-height: 1.1;
 }
 
@@ -1620,7 +1624,7 @@ body.locked { overflow: hidden; }
   .hero-content { padding-top: 72px; }
   .hero-headline { font-size: 9.5vw; }
   .hero-headline br { display: none; }
-  .hero-hi { font-size: 1.25em; margin-bottom: 0.4em; }
+  .hero-hi { font-size: 1.9em; margin-bottom: 0.3em; }
   .shape-circle-left { width: 220px; height: 220px; left: -35%; top: 2%; }
   .shape-circle-right { width: 220px; height: 220px; right: -38%; top: 62%; }
   .shape-circle-bottom { display: none; }

@@ -141,10 +141,11 @@
       intro: 'A study of audience sentiment toward the iPhone 17’s creativity and innovation. I owned the data pipeline, the strategic recommendations, and the AI-prompted campaign that turned findings into action — the full loop from raw data to deployable strategy.',
       challenge: 'After a major launch, the conversation is loud and noisy. There was no structured way to separate genuine audience pain points from surface chatter across tens of thousands of mentions — or to turn them into a campaign a brand could act on.',
       did: [
-        ['Collected the data.', 'Used Mention to pull two timeframes of iPhone 17 conversation — 41,754 mentions (month 1) and 25,528 (month 2) — across news, X, YouTube, Reddit and forums, designing focused search queries to keep the dataset relevant and bias-free.'],
-        ['Turned data into insight.', "Worked through word clouds, Ekman emotion profiling, VADER sentiment, and LDA topic modeling in Orange, then used ChatGPT to code and quantify content — surfacing the consistent core pain point: function specs + value ('Is it good, should I upgrade?' evolving into 'How is it performing, and does that justify buying?')."],
-        ['Wrote the recommendations.', 'Translated findings into three strategic moves: prioritize USP/ecosystem-centered campaigns, implement a localized go-to-market strategy, and address competitive narratives with real-world use over spec-sheet wars.'],
-        ['Built the AI-prompted campaign.', "Designed 'iPhone 17. Life Flows' — a product-first, UGC-led counter to Samsung's 'Switcher Diary.' I engineered the prompts iteratively (original → refined → final), directing the AI to drop influencers for 4–5 curated real Apple loyalists and anchor on the product, then built the collaboration profiles (Creator, Student, Traveller)."]
+        ['Collected 65K+ mentions with Mention', ' — I designed the search queries across news, X, YouTube and Reddit.'],
+        ['Mined the data', ' with word clouds, Ekman emotions, VADER sentiment, and LDA topic modeling in Orange, plus ChatGPT-assisted coding.'],
+        ['Distilled the core pain point', ": function specs + value — 'is it worth the upgrade?'"],
+        ['Wrote three GTM recommendations', ': USP-centered campaigns, localized go-to-market, real-world use over spec wars.'],
+        ["Built 'iPhone 17. Life Flows'", ' — an AI-prompted, curated-UGC campaign with creator profiles, engineered through iterative prompts.']
       ],
       results: [
         ['A clean sentiment pipeline', ' that converted 65K+ mentions into a clear, evidence-based pain-point map.'],
@@ -173,10 +174,11 @@
       intro: 'A global marketing plan for Black Myth: Zhong Kui, an unreleased AAA game. I led the owned-media and cultural positioning — how to amplify the game on every platform, approach community and influencers, and position PR and SEO around a culture-first story.',
       challenge: "Zhong Kui lacks Sun Wukong's global name recognition. The strategic problem: how do you market a premium game whose hero and mythology most of the world has never heard of — without a persuasion gap starving awareness?",
       did: [
-        ['Reframed the weakness as the hook.', "Built the 'Not just a game — a cultural discovery' creative axis: a four-stage arc (Reveal the mythology → the Verdict is yours → Invite into the world → Bridge from Wukong) that leads with mythology and makes the game the destination."],
-        ['Designed a six-channel social strategy.', 'Mapped each platform to a cultural pillar — Douyin/TikTok and Weibo build heat in China; Reddit/X, YouTube, Bilibili, and WeChat/Xiaohongshu convert it globally — each with its own content role, KPI, and cadence.'],
-        ['Structured community & a three-wave influencer plan.', 'Cultural-proximity-first: Wave 1 Chinese-mythology channels (zero persuasion gap), Wave 2 souls-like reviewers, Wave 3 next-gen tech showcases — plus a bilingual Discord, CN-player cultural ambassadors, and an earned-media flywheel piping curated CN content to global channels.'],
-        ['Positioned PR and SEO around culture.', "Two-framing PR (cultural-authority angle for CN press, gameplay-first for international) and an SEM/SEO plan splitting China (Baidu, WeChat Search) and global (Google/Bing) around keywords like 'Who is Zhong Kui,' with a website culture column built for curiosity-driven search traffic."]
+        ['Reframed low recognition as the hook', ": 'Not just a game — a cultural discovery,' a four-stage arc from Reveal to Bridge."],
+        ['Mapped six channels to cultural pillars', ' — Douyin and Weibo build heat in China; Reddit/X, YouTube, and Bilibili convert it globally.'],
+        ['Designed a three-wave influencer plan', ' by cultural proximity: mythology channels → souls-like reviewers → tech showcases.'],
+        ['Built the community architecture', ': a bilingual Discord, CN-player ambassadors, and a CN-to-global earned-media flywheel.'],
+        ['Positioned PR and SEO around culture', " — two-framing press strategy and 'Who is Zhong Kui' search plays on Baidu and Google."]
       ],
       results: [
         ['A culture-first GTM narrative', " that converts Zhong Kui's low recognition into a discovery arc — the marketing hook, not the risk."],
@@ -204,10 +206,11 @@
       intro: "A class influencer-campaign pitch (top-ranked) that turns Brandy Melville's exclusionary sizing into a meme teens can laugh at — and walk away from. I originated the core creative idea and owned the influencer strategy.",
       challenge: "Brandy Melville's 'one size' culture fuels real harm to teen body image, but lecturing teens doesn't work. The problem: how do you critique a beloved brand in a way teens will actually spread — shifting the story from self-blame to system-blame?",
       did: [
-        ['Originated the creative concept.', "I initiated the idea of a dramatic, hyper-expressive AI cat that even Brandy's clothes can't fit — flipping the narrative from self-blame to system-blame, humor over shame. The team then brainstormed the details together."],
-        ['Grounded it in evidence.', "Anchored the concept in real data — CDC sizing charts, Dove and Harvard body-image research — so the satire had a substantive 'what's wrong' foundation, not just a joke."],
-        ['Owned influencer selection and reasoning.', 'Built a two-phase strategy: Phase 1 inner-circle USC-adjacent creators (easy to approach, willing to test the concept) to prove it out, then Phase 2 outer-circle high-reach body-positive creators and journalists (Teen Vogue, WSJ) to scale — each chosen with an explicit fit-and-accessibility rationale.'],
-        ['Mapped everyone to an AIDA funnel.', "Assigned each creator to a stage — Awareness ('Even a cat can't fit in') → Interest ('It's not you, it's the system') → Desire → Action — with platform, media, and messaging per stage, plus a participation mechanic where viewers generate their own AI-cat videos (Sora) under #BrandyMeoville."]
+        ['Originated the AI-cat concept', " — even Brandy's clothes can't fit — flipping self-blame into system-blame, humor over shame."],
+        ['Grounded the satire in evidence', ': CDC sizing charts, Dove and Harvard body-image research.'],
+        ['Built a two-phase influencer roster', ': USC-adjacent creators to prove it out, then high-reach body-positive voices and press (Teen Vogue, WSJ) to scale.'],
+        ['Chose every creator with a written rationale', ' — fit and accessibility, not follower count.'],
+        ['Mapped the roster to an AIDA funnel', ', plus a Sora mechanic for viewers to make their own AI-cat videos under #BrandyMeoville.']
       ],
       results: [
         ['Top-ranked in class, with standout praise from the professor', " — she didn't expect us to analyze the problem so deeply or use AI so flexibly, and called the completeness and execution of the final result beyond her expectations."],
@@ -328,7 +331,9 @@
       '<h3 class="cs-h">The challenge</h3>' +
       '<p class="cs-p">' + p.challenge + '</p>' +
       '<h3 class="cs-h">What I did</h3>' +
-      '<ol class="did">' + p.did.map(function (d) { return '<li><b>' + d[0] + '</b> ' + d[1] + '</li>'; }).join('') + '</ol>' +
+      (isSchool
+        ? '<ul class="res">' + p.did.map(function (d) { return '<li><b>' + d[0] + '</b>' + d[1] + '</li>'; }).join('') + '</ul>'
+        : '<ol class="did">' + p.did.map(function (d) { return '<li><b>' + d[0] + '</b> ' + d[1] + '</li>'; }).join('') + '</ol>') +
       (p.images ? '<div class="gallery"><h4 class="cs-h" style="margin:0 0 1.1rem;">Walk through the work <span class="ss-hint">— scroll, the slides stack</span></h4>' +
         '<div class="ss-scroll"><div class="ss-sticky">' + p.images.map(function (im) {
           return '<figure class="ss-card' + (im[2] ? ' ss-team' : '') + '">' +
