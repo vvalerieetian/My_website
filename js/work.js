@@ -277,6 +277,87 @@
         '<p>' + m.body + '</p>';
       strip.appendChild(el);
     });
+    initStripDrag(strip);
+  }
+
+  /* ---------------- Drag-to-scroll with inertia + velocity skew ---------------- */
+
+  function initStripDrag(strip) {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var down = false, moved = false, startX = 0, startScroll = 0;
+    var lastX = 0, lastT = 0, velocity = 0, rafId = null;
+
+    function cards() { return strip.querySelectorAll('.mini'); }
+
+    function skew(v) {
+      if (reduce) return;
+      var s = Math.max(-10, Math.min(10, v * 0.5));
+      var sc = 1 - Math.min(Math.abs(v) * 0.003, 0.035);
+      cards().forEach(function (c) {
+        c.style.transition = 'none';
+        c.style.transform = 'skewX(' + (-s) + 'deg) scale(' + sc + ')';
+      });
+    }
+
+    function settle() {
+      cards().forEach(function (c) {
+        c.style.transition = '';
+        c.style.transform = '';
+      });
+    }
+
+    // inertia glides the scroll only; skew is settled the moment you release,
+    // so a throttled/frozen rAF can never leave a card stuck mid-tilt.
+    function inertia() {
+      velocity *= 0.93;
+      strip.scrollLeft -= velocity;
+      if (Math.abs(velocity) > 0.35) {
+        rafId = requestAnimationFrame(inertia);
+      } else {
+        rafId = null;
+      }
+    }
+
+    strip.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') return; // touch keeps native momentum scroll
+      down = true; moved = false;
+      startX = e.clientX;
+      startScroll = strip.scrollLeft;
+      lastX = e.clientX; lastT = performance.now(); velocity = 0;
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      strip.classList.add('is-dragging');
+      try { strip.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+
+    strip.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 3) moved = true;
+      strip.scrollLeft = startScroll - dx;
+      var now = performance.now();
+      var dt = (now - lastT) || 16;
+      velocity = (e.clientX - lastX) / dt * 16;
+      lastX = e.clientX; lastT = now;
+      skew(velocity);
+    });
+
+    function release(e) {
+      if (!down) return;
+      down = false;
+      strip.classList.remove('is-dragging');
+      try { strip.releasePointerCapture(e.pointerId); } catch (err) {}
+      settle();                                   // un-tilt immediately (CSS eases it back)
+      if (Math.abs(velocity) > 0.35) inertia();   // keep gliding the scroll
+    }
+    strip.addEventListener('pointerup', release);
+    strip.addEventListener('pointercancel', release);
+
+    // suppress the click that fires right after a real drag
+    strip.addEventListener('click', function (e) {
+      if (moved) { e.stopPropagation(); e.preventDefault(); }
+    }, true);
+    // kill native image drag ghost
+    strip.addEventListener('dragstart', function (e) { e.preventDefault(); });
   }
 
   var schoolGrid = document.getElementById('school-grid');

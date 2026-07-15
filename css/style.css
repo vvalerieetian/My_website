@@ -1308,9 +1308,20 @@ a.pill-button:hover {
   gap: 1.25rem;
   overflow-x: auto;
   padding: 4px 2px 18px;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
+  cursor: grab;
 }
+
+/* drag-to-scroll: while dragging, free-scroll + no text selection */
+.strip.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.strip.is-dragging .mini { transition: none; }
+.strip.is-dragging .mini:hover { transform: none; background: transparent; }
 
 .strip::-webkit-scrollbar { height: 8px; }
 .strip::-webkit-scrollbar-thumb { background: rgba(58, 74, 22, 0.2); border-radius: 20px; }
