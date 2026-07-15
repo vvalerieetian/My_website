@@ -121,11 +121,12 @@
   /* ---------------- More work strip ---------------- */
 
   var more = [
-    { kicker: 'Helios · Original Concept', grad: GRAD.blue, title: 'Cyberbay — SimuCall creative campaign', body: "A campaign built entirely from my own idea and adopted as-is: a LinkedIn carousel where 'Eko,' a 3D character, slips into different professional personas at the other end of a scam call — dramatizing voice-switching attacks while staying clear, credible, and a little fun." },
-    { kicker: 'Helios · Social Content', grad: GRAD.lilac, title: 'AI virtual influencer', body: "Designed monthly Instagram content — imagery direction and copy — for a company-built AI persona, keeping every post consistent with the character's aesthetic and internet-native voice." },
-    { kicker: 'Helios · Insight → Strategy', grad: GRAD.sage, title: 'Travel & consumer research', body: 'Research that fed real proposals: Japanese/Korean outbound behavior and spend for Destination Vancouver, beauty shopping-trend timelines for Estée Lauder, and a pre-trip/during-trip media plan for La Mer across Kakao, Naver, Toss, and geo-fenced push.' },
-    { kicker: 'Helios · Reporting', grad: GRAD.green, title: 'Campaign performance storytelling', body: 'Turned raw campaign data into clear, honest, client-ready highlights — including a La Mer Korea report where impressions and clicks massively overdelivered while CTR came in slightly under, framed accurately but constructively. Praised by leadership.' },
-    { kicker: 'CCE · Brand Strategy', grad: GRAD.pink, title: 'Livestream competitive study', body: "A fast, multi-dimensional teardown of MAC, YSL, Lancôme, Shu Uemura, Bobbi Brown and top domestic brands' livestreams — décor, hosting, activities, merchandising — that gave L'Oréal a structured basis for its own makeup-livestream strategy." }
+    { kicker: 'Helios · Original Concept', cover: 'assets/work/mini_cyberbay.jpg', body: "A campaign built entirely from my own idea and adopted as-is: a LinkedIn carousel where 'Eko,' a 3D character, slips into different professional personas at the other end of a scam call — dramatizing voice-switching attacks while staying clear, credible, and a little fun." },
+    { kicker: 'Helios · Social Content', cover: 'assets/work/mini_ai-influencer.jpg', body: "Designed monthly Instagram content — imagery direction and copy — for a company-built AI persona, keeping every post consistent with the character's aesthetic and internet-native voice." },
+    { kicker: 'Helios · Insight → Strategy', cover: 'assets/work/mini_travel.jpg', body: 'Research that fed real proposals: Japanese/Korean outbound behavior and spend for Destination Vancouver, beauty shopping-trend timelines for Estée Lauder, and a pre-trip/during-trip media plan for La Mer across Kakao, Naver, Toss, and geo-fenced push.' },
+    { kicker: 'Helios · Reporting', cover: 'assets/work/mini_reporting.jpg', body: 'Turned raw campaign data into clear, honest, client-ready highlights — including a La Mer Korea report where impressions and clicks massively overdelivered while CTR came in slightly under, framed accurately but constructively. Praised by leadership.' },
+    { kicker: 'CCE · Brand Strategy', cover: 'assets/work/mini_livestream.jpg', body: "A fast, multi-dimensional teardown of MAC, YSL, Lancôme, Shu Uemura, Bobbi Brown and top domestic brands' livestreams — décor, hosting, activities, merchandising — that gave L'Oréal a structured basis for its own makeup-livestream strategy." },
+    { kicker: 'CCE · Social Listening', cover: 'assets/work/mini_liushen.jpg', body: 'Delivered social listening research for Liushen (heritage FMCG brand in China), translating Xiaohongshu and Douyin trends into product and marketing insights. Nominated for recognition by senior leadership.' }
   ];
 
   /* ---------------- Academic & experimental ---------------- */
@@ -269,9 +270,11 @@
       var el = document.createElement('article');
       el.className = 'mini';
       el.innerHTML =
-        '<div class="swatch" style="background:' + m.grad + '"></div>' +
+        (m.cover
+          ? '<img class="mini-cover" src="' + m.cover + '" alt="' + m.kicker + ' cover">'
+          : '<div class="swatch" style="background:' + m.grad + '"></div>') +
         '<div class="kicker">' + m.kicker + '</div>' +
-        '<h4>' + m.title + '</h4><p>' + m.body + '</p>';
+        '<p>' + m.body + '</p>';
       strip.appendChild(el);
     });
   }
